@@ -3,17 +3,17 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 var config = { 
-    apiKey: "AIzaSyDCmQmPbImbY6J2qGs91pIf8nPEFJabGfY", 
-    authDomain: "fir-auth-a06fa.firebaseapp.com", 
-    databaseURL: "https://fir-auth-a06fa.firebaseio.com", 
-    projectId: "fir-auth-a06fa", 
-    storageBucket: "fir-auth-a06fa.appspot.com", 
-    messagingSenderId: "192548534367", 
-    appId: "1:192548534367:web:9404f4d2501cb2af0d03ea", 
-    measurementId: "G-FEXM8ETEEW" 
+    apiKey: "AIzaSyCC_0FDyXWR4-0er-i3JDKB0FXk4Y7ZZcs",
+    authDomain: "project-management-tool-38651.firebaseapp.com",
+    databaseURL: "https://project-management-tool-38651.firebaseio.com",
+    projectId: "project-management-tool-38651",
+    storageBucket: "project-management-tool-38651.appspot.com",
+    messagingSenderId: "345764564358",
+    appId: "1:345764564358:web:07f6a50bd8a8e400d0b007",
+    measurementId: "G-9DTZZ3V7BE" 
 }; 
 // Initialize Firebase 
 firebase.initializeApp(config);
-firebase.firestore.settings({timestampsInSnapshots: true});
+firebase.firestore().settings({timestampsInSnapshots: true});
 
 export default firebase;

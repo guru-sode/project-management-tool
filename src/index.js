@@ -7,13 +7,17 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from './reducer/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import { reduxFireStore, getFirestore} from 'redux-firestore';
+import { reduxFirestore, getFirestore} from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbconfig';
 
-const store = createStore(rootReducer, 
-    compose(applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})), reduxFireStore(fbConfig), reactReduxFirebase(fbConfig))
-    );
+const store = createStore(rootReducer,
+    compose(
+        applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+        // reactReduxFirebase(fbConfig),
+        reduxFirestore(fbConfig) 
+      )
+  );
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
