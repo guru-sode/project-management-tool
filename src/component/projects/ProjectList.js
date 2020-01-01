@@ -7,6 +7,8 @@ const ProjectList = () => {
             <ProjectSummary />
             <ProjectSummary />
             <ProjectSummary />
+            <ProjectSummary />
+            <ProjectSummary />
         </div>
     )
 }
